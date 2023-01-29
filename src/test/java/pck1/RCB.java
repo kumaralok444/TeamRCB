@@ -24,7 +24,7 @@ public class RCB {
 		jo = (JSONObject) obj;
 
 	}
-@Test
+@Test(description="TO vaidate there is only 4 foreign players")
 public void tc1() {
 	int count=0;
 	JSONArray ja = (JSONArray) jo.get("player");
@@ -37,7 +37,7 @@ public void tc1() {
 	Assert.assertEquals(count, 4);
 	//System.out.println("Test Here");
 }
-@Test
+@Test(description="To validate there is atleast one wicket-keeper")
 public void tc2() {
 	boolean flag=false;
 	JSONArray ja = (JSONArray) jo.get("player");
